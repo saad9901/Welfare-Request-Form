@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAD Welfare Request Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="logo.png" alt="PAD Logo" class="logo">
+            </div>
+            <div class="header-text">
+                <h1>Welfare Request Form</h1>
+                <h2>پاکستان ایسوسی ایشن دبئی</h2>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <p class="notice">Note: All Fields to be filled in English Only / تمام معلومات صرف انگریزی میں درج کریں</p>
+            
+            <form id="welfareForm">
+                <div class="form-group">
+                    <label for="name" class="required">Name</label>
+                    <input type="text" id="name" required>
+                    <span class="urdu-text">نام</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="passport" class="required">Passport No.</label>
+                    <input type="text" id="passport" required>
+                    <span class="urdu-text">پاسپورٹ نمبر</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="emirates" class="required">Emirates ID</label>
+                    <input type="text" id="emirates" required>
+                    <span class="urdu-text">امیریٹس آئی ڈی</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="expiry" class="required">EID Expiry Date</label>
+                    <input type="date" id="expiry" required>
+                    <span class="urdu-text">آئی ڈی کی میعاد ختم ہونے کی تاریخ</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="nationality" class="required">Nationality</label>
+                    <select id="nationality" required>
+                        <option value="">Select Nationality</option>
+                        <option value="pakistani">Pakistani</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="urdu-text">قومیت</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="religion" class="required">Religion</label>
+                    <select id="religion" required>
+                        <option value="">Select Religion</option>
+                        <option value="muslim">Muslim</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input type="text" id="other-religion" placeholder="Please specify religion" style="display: none;">
+                    <span class="urdu-text">مذہب</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="assets" class="required">Do You Have Assets in the form of Gold, Silver, Merchandise, Cash, and excess goods equivalent to the value of fifty two and half tolas of silver after deducting any loans you have:</label>
+                    <select id="assets" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <span class="urdu-text">کیا آپ کے پاس سونا، چاندی، تجارتی سامان، نقدی، اور زائد سامان کی شکل میں اثاثے ہیں جو کہ آپ کے کسی بھی قرض کو منہا کرنے کے بعد ساڑھے باون تولہ چاندی کے برابر ہیں</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="family" class="required">Family</label>
+                    <select id="family" required>
+                        <option value="">Select Family</option>
+                        <option value="syed">Syed</option>
+                        <option value="hashmi">Hashmi</option>
+                        <option value="abbasi">Abbasi</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="urdu-text">خاندان</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile" class="required">UAE Mobile No.</label>
+                    <input type="tel" id="mobile" required>
+                    <span class="urdu-text">یو اے ای موبائل نمبر</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="required">Email</label>
+                    <input type="email" id="email" required>
+                    <span class="urdu-text">ای میل</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address">
+                    <span class="urdu-text">پتہ</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="relate-to" class="required">Relate to</label>
+                    <select id="relate-to" required>
+                        <option value="">Select Category</option>
+                        <option value="legal">Legal</option>
+                        <option value="financial">Financial</option>
+                        <option value="visa-fines">Visa Fines</option>
+                        <option value="repatriation">Repatriation</option>
+                        <option value="medical">Medical</option>
+                        <option value="education">Education</option>
+                        <option value="prisoner-release">Prisoner Release</option>
+                        <option value="rental">Rental</option>
+                        <option value="utility">Utility</option>
+                    </select>
+                    <span class="urdu-text">متعلقہ</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="details" class="required">Please write the brief details of your need</label>
+                    <textarea id="details" required></textarea>
+                    <span class="urdu-text">براہ کرم اپنی ضرورت کی مختصر تفصیلات لکھیں</span>
+                </div>
+
+                <div class="consent-section">
+                    <div class="consent-group">
+                        <label for="zakat-consent" class="required">Do you allow the administration of the Pakistan Association Dubai to collect Zakat and donation on your behalf?</label>
+                        <select id="zakat-consent" required>
+                            <option value="">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <span class="urdu-text">کیا آپ پاکستان ایسوسی ایشن دبئی کی انتظامیہ کو اپنی طرف سے زکوٰۃ اور چندہ جمع کرنے کی اجازت دیتے ہیں؟</span>
+                    </div>
+
+                    <div class="consent-group">
+                        <label for="spend-consent" class="required">And to spend it on your need or those of other deserving individuals?</label>
+                        <select id="spend-consent" required>
+                            <option value="">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <span class="urdu-text">اور اسے اپنی ضرورت پر خرچ کرنے یا دوسرے مستحقین پر؟</span>
+                    </div>
+
+                    <div class="consent-group">
+                        <label for="ownership-consent" class="required">Or to give it to the Ownership of the Pakistan Association Dubai?</label>
+                        <select id="ownership-consent" required>
+                            <option value="">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <span class="urdu-text">یا پاکستان ایسوسی ایشن دبئی کی اپنی ملکیت کو دینے؟</span>
+                    </div>
+                </div>
+
+                <div class="file-notice">
+                    Important Note: Only (jpg, jpeg, png, gif, bmp) Image Files Allowed to be uploaded
+                </div>
+
+                <div class="file-upload">
+                    <label for="emirates-front" class="required">Emirates ID Front:</label>
+                    <input type="file" id="emirates-front" accept="image/*" required>
+                </div>
+
+                <div class="file-upload">
+                    <label for="emirates-back" class="required">Emirates ID Back:</label>
+                    <input type="file" id="emirates-back" accept="image/*" required>
+                </div>
+
+                <div class="file-upload">
+                    <label for="document3" class="required">Document3:</label>
+                    <input type="file" id="document3" accept="image/*" required>
+                </div>
+
+                <div class="file-upload">
+                    <label for="document4">Document4:</label>
+                    <input type="file" id="document4" accept="image/*">
+                </div>
+
+                <div class="acknowledgment">
+                    <div class="form-group">
+                        <label for="acknowledge" class="required">I acknowledge that I have read and understood all the information provided above, and I have given my information accurately.</label>
+                        <select id="acknowledge" required>
+                            <option value="">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <span class="urdu-text">میں تسلیم کرتا ہوں کہ میں نے اوپر فراہم کی گئی تمام معلومات کو پڑھ اور سمجھ لیا ہے، اور میں نے اپنی معلومات درست طریقے سے دی ہیں۔</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
