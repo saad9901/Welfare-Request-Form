@@ -243,43 +243,84 @@ body {
 }
 
 @media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
+    /* Reset form group layout for mobile */
+    .form-group {
+        display: block;
+        margin-bottom: 24px;
+        gap: 0;
     }
 
-    .logo-container {
-        padding: 10px;
-        margin-right: 0;
-        margin-bottom: 20px;
-        width: auto;
+    /* English label styling */
+    .form-group label {
+        display: block;
+        width: 100%;
+        margin-bottom: 4px;
+        text-align: left;
     }
 
-    .logo {
-        width: 200px;
+    /* Urdu text styling */
+    .form-group .urdu-text {
+        display: block;
+        width: 100%;
+        text-align: right;
+        margin: 4px 0 8px 0;
+        padding: 0;
+        font-size: 0.9em;
+        color: #555;
     }
 
-    .header-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .header-text h2 {
-        font-size: 1.4rem;
-    }
-
-    .form-container {
-        padding: 20px;
-    }
-
-    .form-group label,
+    /* Input fields styling */
     .form-group input,
     .form-group select,
     .form-group textarea {
-        flex: 1 0 100%;
+        width: 100%;
+        flex: none;
+        margin-top: 0;
     }
 
-    .submit-btn {
+    /* Special styling for consent sections */
+    .consent-group {
+        margin-bottom: 24px;
+    }
+
+    .consent-group label {
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .consent-group .urdu-text {
+        display: block;
+        text-align: right;
+        margin: 4px 0 8px 0;
+    }
+
+    .consent-group select {
         width: 100%;
-        max-width: none;
+    }
+
+    /* File upload section */
+    .file-upload {
+        margin-bottom: 24px;
+    }
+
+    .file-upload label {
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .file-upload .urdu-text {
+        display: block;
+        text-align: right;
+        margin: 4px 0 8px 0;
+    }
+
+    /* Header adjustments */
+    .header-content {
+        flex-direction: column;
+    }
+
+    .logo-container {
+        margin-right: 0;
+        margin-bottom: 15px;
     }
 }
