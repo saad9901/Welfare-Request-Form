@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAD Welfare Request Form</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -21,188 +22,260 @@
 
     <div class="container">
         <div class="form-container">
-            <p class="notice">Note: All Fields to be filled in English Only / تمام معلومات صرف انگریزی میں درج کریں</p>
+            <div class="language-toggle">
+                <button type="button" class="lang-btn active" data-lang="en">English</button>
+                <button type="button" class="lang-btn" data-lang="ur">اردو</button>
+            </div>
+            
+            <p class="notice" data-en="Note: All Fields to be filled in English Only" data-ur="تمام معلومات صرف انگریزی میں درج کریں"></p>
             
             <form id="welfareForm">
+                <!-- Name Field -->
                 <div class="form-group">
-                    <label for="name" class="required">Name</label>
+                    <label for="name" class="required" data-en="Name" data-ur="نام">Name</label>
                     <input type="text" id="name" required>
-                    <span class="urdu-text">نام</span>
                 </div>
 
+                <!-- Passport Field -->
                 <div class="form-group">
-                    <label for="passport" class="required">Passport No.</label>
+                    <label for="passport" class="required" data-en="Passport No." data-ur="پاسپورٹ نمبر">Passport No.</label>
                     <input type="text" id="passport" required>
-                    <span class="urdu-text">پاسپورٹ نمبر</span>
                 </div>
 
+                <!-- Emirates ID Field -->
                 <div class="form-group">
-                    <label for="emirates" class="required">Emirates ID</label>
+                    <label for="emirates" class="required" data-en="Emirates ID" data-ur="امیریٹس آئی ڈی">Emirates ID</label>
                     <input type="text" id="emirates" required>
-                    <span class="urdu-text">امیریٹس آئی ڈی</span>
                 </div>
 
+                <!-- EID Expiry Date Field -->
                 <div class="form-group">
-                    <label for="expiry" class="required">EID Expiry Date</label>
+                    <label for="expiry" class="required" data-en="EID Expiry Date" data-ur="آئی ڈی کی میعاد ختم ہونے کی تاریخ">EID Expiry Date</label>
                     <input type="date" id="expiry" required>
-                    <span class="urdu-text">آئی ڈی کی میعاد ختم ہونے کی تاریخ</span>
                 </div>
 
+                <!-- Nationality Field -->
                 <div class="form-group">
-                    <label for="nationality" class="required">Nationality</label>
+                    <label for="nationality" class="required" data-en="Nationality" data-ur="قومیت">Nationality</label>
                     <select id="nationality" required>
-                        <option value="">Select Nationality</option>
-                        <option value="pakistani">Pakistani</option>
-                        <option value="other">Other</option>
+                        <option value="" data-en="Select Nationality" data-ur="قومیت منتخب کریں">Select Nationality</option>
+                        <option value="pakistani" data-en="Pakistani" data-ur="پاکستانی">Pakistani</option>
+                        <option value="other" data-en="Other" data-ur="دیگر">Other</option>
                     </select>
-                    <span class="urdu-text">قومیت</span>
                 </div>
 
+                <!-- Religion Field -->
                 <div class="form-group">
-                    <label for="religion" class="required">Religion</label>
+                    <label for="religion" class="required" data-en="Religion" data-ur="مذہب">Religion</label>
                     <select id="religion" required>
-                        <option value="">Select Religion</option>
-                        <option value="muslim">Muslim</option>
-                        <option value="other">Other</option>
+                        <option value="" data-en="Select Religion" data-ur="مذہب منتخب کریں">Select Religion</option>
+                        <option value="muslim" data-en="Muslim" data-ur="مسلمان">Muslim</option>
+                        <option value="other" data-en="Other" data-ur="دیگر">Other</option>
                     </select>
-                    <input type="text" id="other-religion" placeholder="Please specify religion" style="display: none;">
-                    <span class="urdu-text">مذہب</span>
+                    <input type="text" id="other-religion" data-en-placeholder="Please specify religion" data-ur-placeholder="براہ کرم مذہب کی وضاحت کریں" style="display: none;">
                 </div>
 
+                <!-- Assets Field -->
                 <div class="form-group">
-                    <label for="assets" class="required">Do You Have Assets in the form of Gold, Silver, Merchandise, Cash, and excess goods equivalent to the value of fifty two and half tolas of silver after deducting any loans you have:</label>
+                    <label for="assets" class="required" data-en="Do You Have Assets in the form of Gold, Silver, Merchandise, Cash, and excess goods equivalent to the value of fifty two and half tolas of silver after deducting any loans you have:" data-ur="کیا آپ کے پاس سونا، چاندی، تجارتی سامان، نقدی، اور زائد سامان کی شکل میں اثاثے ہیں جو کہ آپ کے کسی بھی قرض کو منہا کرنے کے بعد ساڑھے باون تولہ چاندی کے برابر ہیں">Do You Have Assets...</label>
                     <select id="assets" required>
-                        <option value="">Select an option</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
+                        <option value="" data-en="Select an option" data-ur="ایک آپشن منتخب کریں">Select an option</option>
+                        <option value="yes" data-en="Yes" data-ur="ہاں">Yes</option>
+                        <option value="no" data-en="No" data-ur="نہیں">No</option>
                     </select>
-                    <span class="urdu-text">کیا آپ کے پاس سونا، چاندی، تجارتی سامان، نقدی، اور زائد سامان کی شکل میں اثاثے ہیں جو کہ آپ کے کسی بھی قرض کو منہا کرنے کے بعد ساڑھے باون تولہ چاندی کے برابر ہیں</span>
                 </div>
 
+                <!-- Family Field -->
                 <div class="form-group">
-                    <label for="family" class="required">Family</label>
+                    <label for="family" class="required" data-en="Family" data-ur="خاندان">Family</label>
                     <select id="family" required>
-                        <option value="">Select Family</option>
-                        <option value="syed">Syed</option>
-                        <option value="hashmi">Hashmi</option>
-                        <option value="abbasi">Abbasi</option>
-                        <option value="other">Other</option>
+                        <option value="" data-en="Select Family" data-ur="خاندان منتخب کریں">Select Family</option>
+                        <option value="syed" data-en="Syed" data-ur="سید">Syed</option>
+                        <option value="hashmi" data-en="Hashmi" data-ur="ہاشمی">Hashmi</option>
+                        <option value="abbasi" data-en="Abbasi" data-ur="عباسی">Abbasi</option>
+                        <option value="other" data-en="Other" data-ur="دیگر">Other</option>
                     </select>
-                    <span class="urdu-text">خاندان</span>
                 </div>
 
+                <!-- Mobile Field -->
                 <div class="form-group">
-                    <label for="mobile" class="required">UAE Mobile No.</label>
+                    <label for="mobile" class="required" data-en="UAE Mobile No." data-ur="یو اے ای موبائل نمبر">UAE Mobile No.</label>
                     <input type="tel" id="mobile" required>
-                    <span class="urdu-text">یو اے ای موبائل نمبر</span>
                 </div>
 
+                <!-- Email Field -->
                 <div class="form-group">
-                    <label for="email" class="required">Email</label>
+                    <label for="email" class="required" data-en="Email" data-ur="ای میل">Email</label>
                     <input type="email" id="email" required>
-                    <span class="urdu-text">ای میل</span>
                 </div>
 
+                <!-- Address Field -->
                 <div class="form-group">
-                    <label for="address">Address</label>
+                    <label for="address" data-en="Address" data-ur="پتہ">Address</label>
                     <input type="text" id="address">
-                    <span class="urdu-text">پتہ</span>
                 </div>
 
+                <!-- Relate To Field -->
                 <div class="form-group">
-                    <label for="relate-to" class="required">Relate to</label>
+                    <label for="relate-to" class="required" data-en="Relate to" data-ur="متعلقہ">Relate to</label>
                     <select id="relate-to" required>
-                        <option value="">Select Category</option>
-                        <option value="legal">Legal</option>
-                        <option value="financial">Financial</option>
-                        <option value="visa-fines">Visa Fines</option>
-                        <option value="repatriation">Repatriation</option>
-                        <option value="medical">Medical</option>
-                        <option value="education">Education</option>
-                        <option value="prisoner-release">Prisoner Release</option>
-                        <option value="rental">Rental</option>
-                        <option value="utility">Utility</option>
+                        <option value="" data-en="Select Category" data-ur="زمرہ منتخب کریں">Select Category</option>
+                        <option value="legal" data-en="Legal" data-ur="قانونی">Legal</option>
+                        <option value="financial" data-en="Financial" data-ur="مالی">Financial</option>
+                        <option value="visa-fines" data-en="Visa Fines" data-ur="ویزہ جرمانے">Visa Fines</option>
+                        <option value="repatriation" data-en="Repatriation" data-ur="وطن واپسی">Repatriation</option>
+                        <option value="medical" data-en="Medical" data-ur="طبی">Medical</option>
+                        <option value="education" data-en="Education" data-ur="تعلیم">Education</option>
+                        <option value="prisoner-release" data-en="Prisoner Release" data-ur="قیدی رہائی">Prisoner Release</option>
+                        <option value="rental" data-en="Rental" data-ur="کرایہ">Rental</option>
+                        <option value="utility" data-en="Utility" data-ur="یوٹیلیٹی">Utility</option>
                     </select>
-                    <span class="urdu-text">متعلقہ</span>
                 </div>
 
+                <!-- Details Field -->
                 <div class="form-group">
-                    <label for="details" class="required">Please write the brief details of your need</label>
+                    <label for="details" class="required" data-en="Please write the brief details of your need" data-ur="براہ کرم اپنی ضرورت کی مختصر تفصیلات لکھیں">Please write the brief details of your need</label>
                     <textarea id="details" required></textarea>
-                    <span class="urdu-text">براہ کرم اپنی ضرورت کی مختصر تفصیلات لکھیں</span>
                 </div>
 
+                <!-- Consent Section -->
                 <div class="consent-section">
                     <div class="consent-group">
-                        <label for="zakat-consent" class="required">Do you allow the administration of the Pakistan Association Dubai to collect Zakat and donation on your behalf?</label>
+                        <label for="zakat-consent" class="required" data-en="Do you allow the administration of the Pakistan Association Dubai to collect Zakat and donation on your behalf?" data-ur="کیا آپ پاکستان ایسوسی ایشن دبئی کی انتظامیہ کو اپنی طرف سے زکوٰۃ اور چندہ جمع کرنے کی اجازت دیتے ہیں؟">Do you allow...</label>
                         <select id="zakat-consent" required>
-                            <option value="">Select an option</option>
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
+                            <option value="" data-en="Select an option" data-ur="ایک آپشن منتخب کریں">Select an option</option>
+                            <option value="yes" data-en="Yes" data-ur="ہاں">Yes</option>
+                            <option value="no" data-en="No" data-ur="نہیں">No</option>
                         </select>
-                        <span class="urdu-text">کیا آپ پاکستان ایسوسی ایشن دبئی کی انتظامیہ کو اپنی طرف سے زکوٰۃ اور چندہ جمع کرنے کی اجازت دیتے ہیں؟</span>
                     </div>
 
                     <div class="consent-group">
-                        <label for="spend-consent" class="required">And to spend it on your need or those of other deserving individuals?</label>
+                        <label for="spend-consent" class="required" data-en="And to spend it on your need or those of other deserving individuals?" data-ur="اور اسے اپنی ضرورت پر خرچ کرنے یا دوسرے مستحقین پر؟">And to spend it...</label>
                         <select id="spend-consent" required>
-                            <option value="">Select an option</option>
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
+                            <option value="" data-en="Select an option" data-ur="ایک آپشن منتخب کریں">Select an option</option>
+                            <option value="yes" data-en="Yes" data-ur="ہاں">Yes</option>
+                            <option value="no" data-en="No" data-ur="نہیں">No</option>
                         </select>
-                        <span class="urdu-text">اور اسے اپنی ضرورت پر خرچ کرنے یا دوسرے مستحقین پر؟</span>
                     </div>
 
                     <div class="consent-group">
-                        <label for="ownership-consent" class="required">Or to give it to the Ownership of the Pakistan Association Dubai?</label>
+                        <label for="ownership-consent" class="required" data-en="Or to give it to the Ownership of the Pakistan Association Dubai?" data-ur="یا پاکستان ایسوسی ایشن دبئی کی اپنی ملکیت کو دینے؟">Or to give it...</label>
                         <select id="ownership-consent" required>
-                            <option value="">Select an option</option>
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
+                            <option value="" data-en="Select an option" data-ur="ایک آپشن منتخب کریں">Select an option</option>
+                            <option value="yes" data-en="Yes" data-ur="ہاں">Yes</option>
+                            <option value="no" data-en="No" data-ur="نہیں">No</option>
                         </select>
-                        <span class="urdu-text">یا پاکستان ایسوسی ایشن دبئی کی اپنی ملکیت کو دینے؟</span>
                     </div>
                 </div>
 
-                <div class="file-notice">
+                <!-- File Upload Section -->
+                <div class="file-notice" data-en="Important Note: Only (jpg, jpeg, png, gif, bmp) Image Files Allowed to be uploaded" data-ur="اہم نوٹ: صرف (jpg, jpeg, png, gif, bmp) امیج فائلیں اپ لوڈ کرنے کی اجازت ہے">
                     Important Note: Only (jpg, jpeg, png, gif, bmp) Image Files Allowed to be uploaded
                 </div>
 
                 <div class="file-upload">
-                    <label for="emirates-front" class="required">Emirates ID Front:</label>
+                    <label for="emirates-front" class="required" data-en="Emirates ID Front:" data-ur="امریٹس آئی ڈی فرنٹ:">Emirates ID Front:</label>
                     <input type="file" id="emirates-front" accept="image/*" required>
                 </div>
 
                 <div class="file-upload">
-                    <label for="emirates-back" class="required">Emirates ID Back:</label>
+                    <label for="emirates-back" class="required" data-en="Emirates ID Back:" data-ur="امریٹس آئی ڈی بیک:">Emirates ID Back:</label>
                     <input type="file" id="emirates-back" accept="image/*" required>
                 </div>
 
                 <div class="file-upload">
-                    <label for="document3" class="required">Document3:</label>
+                    <label for="document3" class="required" data-en="Document 3:" data-ur="دستاویز 3:">Document 3:</label>
                     <input type="file" id="document3" accept="image/*" required>
                 </div>
 
                 <div class="file-upload">
-                    <label for="document4">Document4:</label>
+                    <label for="document4" data-en="Document 4:" data-ur="دستاویز 4:">Document 4:</label>
                     <input type="file" id="document4" accept="image/*">
                 </div>
 
+                <!-- Acknowledgment -->
                 <div class="acknowledgment">
                     <div class="form-group">
-                        <label for="acknowledge" class="required">I acknowledge that I have read and understood all the information provided above, and I have given my information accurately.</label>
+                        <label for="acknowledge" class="required" data-en="I acknowledge that I have read and understood all the information provided above, and I have given my information accurately." data-ur="میں تسلیم کرتا ہوں کہ میں نے اوپر فراہم کی گئی تمام معلومات کو پڑھ اور سمجھ لیا ہے، اور میں نے اپنی معلومات درست طریقے سے دی ہیں۔">I acknowledge that...</label>
                         <select id="acknowledge" required>
-                            <option value="">Select an option</option>
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
+                            <option value="" data-en="Select an option" data-ur="ایک آپشن منتخب کریں">Select an option</option>
+                            <option value="yes" data-en="Yes" data-ur="ہاں">Yes</option>
+                            <option value="no" data-en="No" data-ur="نہیں">No</option>
                         </select>
-                        <span class="urdu-text">میں تسلیم کرتا ہوں کہ میں نے اوپر فراہم کی گئی تمام معلومات کو پڑھ اور سمجھ لیا ہے، اور میں نے اپنی معلومات درست طریقے سے دی ہیں۔</span>
                     </div>
                 </div>
 
-                <button type="submit" class="submit-btn">Submit</button>
+                <button type="submit" class="submit-btn" data-en="Submit" data-ur="جمع کروائیں">Submit</button>
             </form>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Language toggle functionality
+            const langButtons = document.querySelectorAll('.lang-btn');
+            const form = document.getElementById('welfareForm');
+            
+            langButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    langButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get selected language
+                    const lang = this.getAttribute('data-lang');
+                    
+                    // Update form direction
+                    form.setAttribute('dir', lang === 'ur' ? 'rtl' : 'ltr');
+                    
+                    // Update all labels and text elements
+                    document.querySelectorAll('[data-en], [data-ur]').forEach(element => {
+                        if (element.tagName === 'OPTION') {
+                            element.textContent = element.getAttribute(`data-${lang}`);
+                        } else if (element.tagName === 'INPUT' && element.hasAttribute(`data-${lang}-placeholder`)) {
+                            element.placeholder = element.getAttribute(`data-${lang}-placeholder`);
+                        } else if (element.hasAttribute(`data-${lang}`)) {
+                            element.textContent = element.getAttribute(`data-${lang}`);
+                        }
+                    });
+                    
+                    // Update date placeholder
+                    const dateInput = document.getElementById('expiry');
+                    dateInput.placeholder = lang === 'ur' ? 'yyyy/mm/dd' : 'mm/dd/yyyy';
+                    
+                    // Toggle religion input field
+                    const religionSelect = document.getElementById('religion');
+                    const otherReligionInput = document.getElementById('other-religion');
+                    if (religionSelect.value === 'other') {
+                        otherReligionInput.style.display = 'block';
+                    }
+                });
+            });
+            
+            // Religion field toggle
+            const religionSelect = document.getElementById('religion');
+            const otherReligionInput = document.getElementById('other-religion');
+            
+            religionSelect.addEventListener('change', function() {
+                if (this.value === 'other') {
+                    otherReligionInput.style.display = 'block';
+                    otherReligionInput.required = true;
+                } else {
+                    otherReligionInput.style.display = 'none';
+                    otherReligionInput.required = false;
+                    otherReligionInput.value = '';
+                }
+            });
+            
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Add form submission logic here
+                alert('Form would be submitted now');
+            });
+        });
+    </script>
 </body>
 </html>
